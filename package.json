@@ -1,0 +1,27 @@
+{
+  "name": "countries",
+  "version": "0.0.1",
+  "description": "This application is an angular-2 project for looking up countries data.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bAmrish/countries.git"
+  },
+  "keywords": [
+    "countries",
+    "capital",
+    "currency",
+    "angularjs",
+    "angularjs2",
+    "angular2"
+  ],
+  "author": "Amrish Bharatiya <bamrish@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bAmrish/countries/issues"
+  },
+  "homepage": "https://github.com/bAmrish/countries#readme"
+}
