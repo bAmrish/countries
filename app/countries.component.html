@@ -13,23 +13,25 @@
 <table class="table country">
     <thead>
       <tr>
-          <th>Flag</th>
           <th>Country</th>
           <th>Capital</th>
           <th>Currency</th>
-          <th>Currency Symbol</th>
+          <th>Native Name</th>
       </tr>
   </thead>
   <tbody>
-      <tr>
-        <td class="flag">
-          <img src="http://lipis.github.io/flag-icon-css/flags/4x3/us.svg" alt="">
-      </td>
-      <td>United States</td>
-      <td>Washington D.C.</td>
-      <td>US Dollar</td>
-      <td>$</td>
+  <tr *ngFor="#country of countries">
+      <td>{{country.name}}</td>
+      <td>{{country.capital}}</td>
+      <td>{{country.currency[0]}}</td>
+      <td>{{country.nativeName}}</td>
   </tr>
 </tbody>
 </table>
 </div>
+
+<!--       <tr>
+        <td class="flag">
+          <img src="http://lipis.github.io/flag-icon-css/flags/4x3/us.svg" alt="">
+      </td>
+ -->      
