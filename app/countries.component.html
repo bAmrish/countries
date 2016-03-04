@@ -13,19 +13,21 @@
 <table class="table country">
     <thead>
       <tr>
-          <th>Country</th>
-          <th>Capital</th>
-          <th>Currency</th>
-          <th>Native Name</th>
+        <th>Index</th>
+        <th>Country</th>
+        <th>Capital</th>
+        <th>Currency</th>
+        <th>Native Name</th>
       </tr>
   </thead>
   <tbody>
-  <tr *ngFor="#country of countries">
-      <td>{{country.name}}</td>
-      <td>{{country.capital}}</td>
-      <td>{{country.currency[0]}}</td>
-      <td>{{country.nativeName}}</td>
-  </tr>
+    <tr *ngFor="#country of countries; #i = index">
+        <td>{{i+1}}</td>
+        <td>{{country.name}}</td>
+        <td>{{country.capital}}</td>
+        <td>{{country.currency[0]}}</td>
+        <td>{{country.nativeName}}</td>
+    </tr>
 </tbody>
 </table>
 </div>
