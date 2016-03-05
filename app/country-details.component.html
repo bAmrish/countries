@@ -1,0 +1,94 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="panel panel-default country-detail">
+      <div class="panel-heading">
+        <h2 class="panel-title">United States</h2>
+      </div>
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="flag">
+              <img src="http://lipis.github.io/flag-icon-css/flags/4x3/{{country.cca2 | lowercase}}.svg" alt="">
+            </div>  
+          </div>
+          <div class="col-md-9">
+            <table class="table">
+              <colgroup>
+                <col class="col-sm-2">
+                <col class="col-sm-10">                
+              </colgroup>
+              <tr>
+                <th>Country Codes:</th>
+                <td>
+                  <code>{{country.cca2}}</code>
+                  <code>{{country.cca3}}</code>
+                  <code>{{country.ccn3}}</code>
+                </td>
+              </tr>
+              <tr>              
+                <th>Name: </th>
+                <td>{{country.name}}</td>
+              </tr>
+              <tr>
+                <th>Capital: </th>
+                <td>{{country.capital}} </td>
+              </tr>
+              <tr>
+                <th>Currency: </th>
+                <td>{{country.currency[0]}} </td>
+              </tr>                  
+              <tr>
+                <th>Native Name: </th>
+                <td>{{country.nativeName}} </td>
+              </tr>
+              <tr>
+                <th>Population</th>
+                <td>{{country.population}} </td>
+              </tr>
+              <tr>
+                <th>Region</th>
+                <td>{{country.region}} </td>
+              </tr>
+              <tr>
+                <th>Sub Region</th>
+                <td>{{country.subregion}} </td>
+              </tr>
+              <tr>
+                <th>tld</th>
+                <td><code>{{country.tld}}</code></td>
+              </tr>
+              <tr>
+                <th>Calling Code</th>
+                <td>
+                  <code *ngFor="#code of country.callingCode">+{{code}}</code>
+                </td>
+              </tr>
+              <tr>
+                <th>Bordering Countries</th>
+                <td>
+                    <div class="row" *ngFor="#country of country.borders">
+                      <div class="col-md-12">{{country}}</div>
+                    </div>
+                </td>
+              </tr>
+              <tr>
+                <th>Alternate Spellings</th>
+                <td>
+                    <div class="row" *ngFor="#spelling of country.altSpellings">
+                      <div class="col-md-12">{{spelling}}</div>
+                    </div>
+                </td>
+              </tr>              
+              <tr *ngIf="country.timezones">
+                <th>Time Zones</th>
+                <td>                
+                  <code *ngFor="#timezone of country.timezones">{{timezone}}</code> 
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+.country-detail .flag img{
+  width: 180px;
+  height: 150px;
+}
+
+.country-detail .list-group-item {
+    border: 0px solid #ddd;
+    padding: 3px 15px;
+}
+
+.country-detail .list-group{
+    margin-bottom: 0px;
+}
+
+
+.country-detail .vertical-middle {
+  vertical-align: middle;
+}

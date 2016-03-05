@@ -1,15 +1,21 @@
 import {Component} from 'angular2/core';
 import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from 'angular2/router';
 
-import {CountryService} from './country.service'
-import {CountryListComponent} from './country-list.component'
+import {CountryService} from './country.service';
+import {CountryListComponent} from './country-list.component';
+import {CountryDetailsComponent} from './country-details.component';
 
 @RouteConfig([
     {
-        name: 'HeroList',
+        name: 'CountryList',
         path: '/',
         component: CountryListComponent,
         useAsDefault: true   
+    },
+    {
+        name: 'CountryDetail',
+        path: '/details/:id',
+        component: CountryDetailsComponent
     }
 ])
 @Component ({

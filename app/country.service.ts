@@ -21,5 +21,8 @@ export class CountryService {
         return COUNTRIES.filter(c => exp.test(c.name));
     }
 
+    getCountry(id: string): Country {
+        return COUNTRIES.filter(country => country.cca2.toUpperCase() === id.toUpperCase())[0]
+    }
 
 }
