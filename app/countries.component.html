@@ -6,7 +6,7 @@
         <div class="tweet">
           <form class="form">
             <label for="tweet">What are you intrested in?</label>
-            <input type="text" name="tweet">
+            <input type="text" [(ngModel)]="searchTerm" name="tweet" (keyup)="onSearch()">
         </form>
     </div>
 </div>  
