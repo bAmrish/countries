@@ -5,15 +5,27 @@
     <div class="panel-body">
         <div class="tweet">
           <form class="form">
-            <label for="tweet">What are you intrested in?</label>
-            <input type="text" [(ngModel)]="searchTerm" name="tweet" (keyup)="onSearch()" placeholder="Entery Country Name...">
+          <div class="form-group form-group-lg">            
+            <label class="control-label" for="tweet">
+              What are you intrested in?
+            </label>
+            <input type="text" 
+              [(ngModel)]="searchTerm" 
+              name="tweet" 
+              (keyup)="onSearch()"
+              class="form-control input-lg" 
+              placeholder="Entery Country Name..." 
+              focus
+            >
+          </div>
         </form>
     </div>
 </div>  
-<table class="table country">
+<table class="table table-hover country">
     <thead>
       <tr>
         <th>Index</th>
+        <th>Flag</th>
         <th>Country</th>
         <th>Capital</th>
         <th>Currency</th>
@@ -24,6 +36,7 @@
   <tbody>
     <tr *ngFor="#country of countries; #i = index">
         <td>{{i+1}}</td>
+        <td class="flag"><img src="http://lipis.github.io/flag-icon-css/flags/4x3/{{country.cca2 | lowercase}}.svg" alt=""></td>
         <td>{{country.name}}</td>
         <td>{{country.capital}}</td>
         <td>{{country.currency[0]}}</td>
