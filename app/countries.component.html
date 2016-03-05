@@ -36,7 +36,11 @@
   <tbody>
     <tr *ngFor="#country of countries; #i = index">
         <td>{{i+1}}</td>
-        <td class="flag"><img src="http://lipis.github.io/flag-icon-css/flags/4x3/{{country.cca2 | lowercase}}.svg" alt=""></td>
+        <td class="flag">
+          <a href="http://lipis.github.io/flag-icon-css/flags/4x3/{{country.cca2 | lowercase}}.svg" target="_blank">
+            <img src="http://lipis.github.io/flag-icon-css/flags/4x3/{{country.cca2 | lowercase}}.svg" class="img-rounded" alt="">
+          </a>
+        </td>
         <td>{{country.name}}</td>
         <td>{{country.capital}}</td>
         <td>{{country.currency[0]}}</td>
