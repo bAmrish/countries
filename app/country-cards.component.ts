@@ -1,4 +1,5 @@
 import {Component} from 'angular2/core';
+import {ROUTER_DIRECTIVES} from 'angular2/router';
 
 import {CountryService} from './country.service';
 import {Country} from './country';
@@ -7,7 +8,8 @@ import {Country} from './country';
     selector: 'country-cards',
     templateUrl: 'app/country-cards.component.html',
     styleUrls: ['app/country-cards.component.css'],
-    inputs: ['countries']
+    inputs: ['countries'],
+    directives: [ROUTER_DIRECTIVES]
 })
 export class CountryCardsComponent {
     
