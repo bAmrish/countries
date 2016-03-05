@@ -4,13 +4,19 @@ import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from 'angular2/router'
 import {CountryService} from './country.service';
 import {CountryListComponent} from './country-list.component';
 import {CountryDetailsComponent} from './country-details.component';
+import {CountryCardsComponent} from './country-cards.component';
 
 @RouteConfig([
     {
         name: 'CountryList',
-        path: '/',
+        path: '/list',
         component: CountryListComponent,
-        useAsDefault: true   
+    },
+    {
+        name: 'CountryCards',
+        path: '/cards',
+        component: CountryCardsComponent,
+        useAsDefault: true
     },
     {
         name: 'CountryDetails',
