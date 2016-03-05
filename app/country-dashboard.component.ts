@@ -29,4 +29,9 @@ export class CountryDashboardComponent implements OnInit {
     onSearch() {
         this.countries = this._countryService.searchCountries(this.searchTerm);
     }
+
+    
+    setView(value: string){
+        this.view = value;
+    }
 }
