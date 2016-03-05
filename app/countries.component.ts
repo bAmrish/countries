@@ -5,8 +5,15 @@ import {CountryService} from './country.service';
 import {CountryListComponent} from './country-list.component';
 import {CountryDetailsComponent} from './country-details.component';
 import {CountryCardsComponent} from './country-cards.component';
+import {CountryDashboardComponent} from './country-dashboard.component';
 
 @RouteConfig([
+    {
+        name: 'CountryDashboard',
+        path: '/',
+        component: CountryDashboardComponent,
+        useAsDefault: true
+    },
     {
         name: 'CountryList',
         path: '/list',
@@ -15,8 +22,7 @@ import {CountryCardsComponent} from './country-cards.component';
     {
         name: 'CountryCards',
         path: '/cards',
-        component: CountryCardsComponent,
-        useAsDefault: true
+        component: CountryCardsComponent
     },
     {
         name: 'CountryDetails',

@@ -1,24 +1,16 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-12">
-      <div class="panel panel-default all-cards-container">
-        <div class="panel-body">
-          <div class="card" *ngFor="#country of countries">
-            <div class="row">
-              <div class="col-md-12">
-                <div class="card-head">{{country.name}}</div>
-                <div class="card-body image flag">
-                  <img src="http://lipis.github.io/flag-icon-css/flags/4x3/{{country.cca2 | lowercase}}.svg" alt="">
-                </div>
-                <div class="card-footer">
-                  <span class="region pull-left">{{country.region}}</span>
-                  <span class="region pull-right">{{country.subregion}}</span>
-                </div>
-              </div>
-            </div>
-          </div> 
+<div class="all-cards-container">
+  <div class="card" *ngFor="#country of countries">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card-head">{{country.name}}</div>
+        <div class="card-body image flag">
+          <img src="http://lipis.github.io/flag-icon-css/flags/4x3/{{country.cca2 | lowercase}}.svg" alt="">
+        </div>
+        <div class="card-footer">
+          <span class="region pull-left">{{country.region}}</span>
+          <span class="region pull-right">{{country.subregion}}</span>
         </div>
       </div>
     </div>
-  </div>
+  </div> 
 </div>

@@ -1,4 +1,4 @@
-import {Component, OnInit} from 'angular2/core';
+import {Component} from 'angular2/core';
 import {Country} from './country';
 import {CountryService} from './country.service'
 import {MapLinkPipe} from './map-link.pipe';
@@ -8,9 +8,10 @@ import {ROUTER_DIRECTIVES} from 'angular2/router';
     selector: 'country-list',
     templateUrl: 'app/country-list.component.html',
     pipes: [MapLinkPipe],
+    inputs: ['countries'],
     directives: [ROUTER_DIRECTIVES]
 })
-export class CountryListComponent implements OnInit {
+export class CountryListComponent {
 
     public searchTerm: string;
     public countries: Country[] = [];
@@ -18,12 +19,4 @@ export class CountryListComponent implements OnInit {
     constructor(
         private _countryService: CountryService
     ){};
-
-    ngOnInit() {
-        this.countries = this._countryService.getCountries();
-    }
-
-    onSearch() {
-        this.countries = this._countryService.searchCountries(this.searchTerm);
-    }
 }

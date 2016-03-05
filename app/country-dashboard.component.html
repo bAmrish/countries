@@ -1,0 +1,32 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h1 class="panel-title">What country are you intrested in today?</h1>
+    </div>
+    <div class="panel-body">
+        <div class="tweet">
+          <form class="form">
+          <div class="form-group form-group-lg">            
+            <div class="input-group">
+            <div class="input-group-addon">              
+              <span class="glyphicon glyphicon-search"></span>              
+            </div>
+              <input type="search" 
+                [(ngModel)]="searchTerm" 
+                name="tweet" 
+                (keyup)="onSearch()"
+                class="form-control input-lg" 
+                placeholder="Entery Country Name..." 
+                autofocus
+              >
+            </div>
+          </div>
+        </form>
+    </div>
+  </div>  
+  <div *ngIf="view=='cards'">
+    <country-cards [countries]="countries"></country-cards>
+  </div>
+  <div *ngIf="view=='list'">
+    <country-list [countries]="countries"></country-list>
+  </div>
+</div>

@@ -1,28 +1,3 @@
-<div class="panel panel-default">
-    <div class="panel-heading">
-    <h1 class="panel-title">What country are you intrested in today?</h1>
-    </div>
-    <div class="panel-body">
-        <div class="tweet">
-          <form class="form">
-          <div class="form-group form-group-lg">            
-            <div class="input-group">
-            <div class="input-group-addon">              
-              <span class="glyphicon glyphicon-search"></span>              
-            </div>
-              <input type="search" 
-                [(ngModel)]="searchTerm" 
-                name="tweet" 
-                (keyup)="onSearch()"
-                class="form-control input-lg" 
-                placeholder="Entery Country Name..." 
-                autofocus
-              >
-            </div>
-          </div>
-        </form>
-    </div>
-</div>  
 <div class="table-responsive">
   <table class="table table-hover country">
       <thead>
@@ -57,10 +32,3 @@
     </tbody>
   </table>
 </div>
-</div>
-
-<!--       <tr>
-        <td class="flag">
-          <img src="http://lipis.github.io/flag-icon-css/flags/4x3/us.svg" alt="">
-      </td>
- -->      
