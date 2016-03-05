@@ -23,38 +23,40 @@
         </form>
     </div>
 </div>  
-<table class="table table-hover country">
-    <thead>
-      <tr>
-        <th>Index</th>
-        <th>Flag</th>
-        <th>Country</th>
-        <th>Capital</th>
-        <th>Currency</th>
-        <th>Native Name</th>
-        <th>Map</th>
+<div class="table-responsive">
+  <table class="table table-hover country">
+      <thead>
+        <tr>
+          <th>Index</th>
+          <th>Flag</th>
+          <th>Country</th>
+          <th>Capital</th>
+          <th>Currency</th>
+          <th>Native Name</th>
+          <th>Map</th>
+        </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="#country of countries; #i = index">
+          <td>{{i+1}}</td>
+          <td class="flag">
+            <a href="http://lipis.github.io/flag-icon-css/flags/4x3/{{country.cca2 | lowercase}}.svg" target="_blank">
+              <img src="http://lipis.github.io/flag-icon-css/flags/4x3/{{country.cca2 | lowercase}}.svg" class="img-rounded" alt="">
+            </a>
+          </td>
+          <td>
+            <a [routerLink]="['CountryDetails', {id: country.cca2}]">
+              {{country.name}}
+            </a>
+          </td>
+          <td>{{country.capital}}</td>
+          <td>{{country.currency[0]}}</td>
+          <td>{{country.nativeName}}</td>
+          <td><a class="btn btn-primary" href="{{country.latlng | mapLink}}" target="_blank">View Map</a></td>
       </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="#country of countries; #i = index">
-        <td>{{i+1}}</td>
-        <td class="flag">
-          <a href="http://lipis.github.io/flag-icon-css/flags/4x3/{{country.cca2 | lowercase}}.svg" target="_blank">
-            <img src="http://lipis.github.io/flag-icon-css/flags/4x3/{{country.cca2 | lowercase}}.svg" class="img-rounded" alt="">
-          </a>
-        </td>
-        <td>
-          <a [routerLink]="['CountryDetails', {id: country.cca2}]">
-            {{country.name}}
-          </a>
-        </td>
-        <td>{{country.capital}}</td>
-        <td>{{country.currency[0]}}</td>
-        <td>{{country.nativeName}}</td>
-        <td><a class="btn btn-primary" href="{{country.latlng | mapLink}}" target="_blank">View Map</a></td>
-    </tr>
-</tbody>
-</table>
+    </tbody>
+  </table>
+</div>
 </div>
 
 <!--       <tr>

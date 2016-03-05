@@ -5,7 +5,6 @@ import {Country} from './country'
 @Injectable()
 export class CountryService {
     getCountries() : Country[] {
-
         return COUNTRIES
     }
 
