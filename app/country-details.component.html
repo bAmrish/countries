@@ -10,7 +10,14 @@
             <div class="flag">
               <img src="http://lipis.github.io/flag-icon-css/flags/4x3/{{country.cca2 | lowercase}}.svg" alt="">
             </div>
-            <a href="#" (click)="goBack()">Back</a>  
+            <ul class="list-unstyled">
+              <li>
+                <a href="#" (click)="goBack()">Back</a>  
+              </li>
+              <li>                
+                <a [routerLink]="['CountryList']">All Countries</a>  
+              </li>
+            </ul>
           </div>
           <div class="col-md-9">
             <table class="table">
