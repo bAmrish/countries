@@ -10,9 +10,12 @@
             <div class="flag">
               <img src="http://lipis.github.io/flag-icon-css/flags/4x3/{{country.cca2 | lowercase}}.svg" alt="">
             </div>
-            <ul class="list-unstyled">
+            <ul class="list-unstyled list-inline">
               <li>
-                <a href="#" (click)="goBack()">Back</a>  
+                <a class="btn btn-default" href="#" (click)="goBack()">Go Back</a>  
+              </li>
+              <li>
+                <a class="btn btn-primary" href="{{country.latlng | mapLink}}" target="_blank">View Map</a>
               </li>
             </ul>
           </div>

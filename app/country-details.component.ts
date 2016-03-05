@@ -3,12 +3,14 @@ import {RouteParams} from 'angular2/router';
 import {Country} from './country';
 import {CountryService} from './country.service';
 import {ROUTER_DIRECTIVES} from 'angular2/router';
+import {MapLinkPipe} from './map-link.pipe';
 
 @Component({
     selector: 'country-details',
     templateUrl: 'app/country-details.component.html',
     styleUrls: ['app/country-details.component.css'],
-    directives: [ROUTER_DIRECTIVES]
+    directives: [ROUTER_DIRECTIVES],
+    pipes: [MapLinkPipe]
 })
 export class CountryDetailsComponent implements OnInit{
     public country: Country;
