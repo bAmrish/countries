@@ -22,7 +22,26 @@ export class CountryService {
     }
 
     getCountry(id: string): Country {
-        return COUNTRIES.filter(country => country.cca2.toUpperCase() === id.toUpperCase())[0]
+        let code = id.trim();
+        let lookup;
+
+        if(code.length === 2) {
+            lookup = "cca2"
+        } else if (code.length === 3){
+            if(parseInt(id, 10)){
+                lookup = "ccn3"
+            } else {
+                lookup = "cca3"
+            }
+        } else {
+            return;
+        }
+
+        return COUNTRIES.filter(country => country[lookup].toUpperCase() === id.toUpperCase())[0];
     }
 
+    getCountryName(id: string): string {
+        let country = this.getCountry(id);
+        return country.name || "";
+    }
 }

@@ -25,4 +25,8 @@ export class CountryDetailsComponent implements OnInit{
     goBack(){
         window.history.back();
     }
+
+    getCountryName(id: string): string {
+        return this._countryService.getCountryName(id);
+    }
 }

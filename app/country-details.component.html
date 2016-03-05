@@ -68,7 +68,7 @@
                 <th>Bordering Countries</th>
                 <td>
                     <div class="row" *ngFor="#country of country.borders">
-                      <div class="col-md-12">{{country}}</div>
+                      <div class="col-md-12">{{getCountryName(country)}}</div>
                     </div>
                 </td>
               </tr>
