@@ -44,4 +44,8 @@ export class CountryService {
         let country = this.getCountry(id);
         return country.name || "";
     }
+
+    getCountryByName(name: string): Country {
+        return COUNTRIES.filter(country => country["name"].toUpperCase() === name.trim().toUpperCase())[0];
+    }
 }

@@ -68,7 +68,11 @@
                 <th>Bordering Countries</th>
                 <td>
                     <div class="row" *ngFor="#country of country.borders">
-                      <div class="col-md-12">{{getCountryName(country)}}</div>
+                      <div class="col-md-12">
+                        <a [routerLink]="['CountryDetails', {id: country}]">
+                          {{getCountryName(country)}}
+                        </a>
+                      </div>
                     </div>
                 </td>
               </tr>

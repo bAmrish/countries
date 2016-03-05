@@ -2,11 +2,13 @@ import {Component, OnInit} from 'angular2/core';
 import {RouteParams} from 'angular2/router';
 import {Country} from './country';
 import {CountryService} from './country.service';
+import {ROUTER_DIRECTIVES} from 'angular2/router';
 
 @Component({
     selector: 'country-details',
     templateUrl: 'app/country-details.component.html',
-    styleUrls: ['app/country-details.component.css']
+    styleUrls: ['app/country-details.component.css'],
+    directives: [ROUTER_DIRECTIVES]
 })
 export class CountryDetailsComponent implements OnInit{
     public country: Country;
