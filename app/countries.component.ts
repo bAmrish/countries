@@ -13,7 +13,7 @@ import {CountryDetailsComponent} from './country-details.component';
         useAsDefault: true   
     },
     {
-        name: 'CountryDetail',
+        name: 'CountryDetails',
         path: '/details/:id',
         component: CountryDetailsComponent
     }

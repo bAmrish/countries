@@ -43,7 +43,11 @@
             <img src="http://lipis.github.io/flag-icon-css/flags/4x3/{{country.cca2 | lowercase}}.svg" class="img-rounded" alt="">
           </a>
         </td>
-        <td>{{country.name}}</td>
+        <td>
+          <a [routerLink]="['CountryDetails', {id: country.cca2}]">
+            {{country.name}}
+          </a>
+        </td>
         <td>{{country.capital}}</td>
         <td>{{country.currency[0]}}</td>
         <td>{{country.nativeName}}</td>
