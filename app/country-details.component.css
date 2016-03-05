@@ -1,6 +1,7 @@
 .country-detail .flag img{
   width: 180px;
   height: 150px;
+  border: 1px solid #eee;
 }
 
 .country-detail .list-group-item {
