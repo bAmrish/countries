@@ -6,7 +6,6 @@ import {MapLinkPipe} from './map-link.pipe';
 @Component ({
     selector: 'country-list',
     templateUrl: 'app/country-list.component.html',
-    providers: [CountryService],
     pipes: [MapLinkPipe]
 })
 export class CountryListComponent implements OnInit {

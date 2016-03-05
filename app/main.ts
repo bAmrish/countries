@@ -1,4 +1,4 @@
 import {bootstrap} from 'angular2/platform/browser';
-import {CountryListComponent} from './country-list.component';
+import {CountriesComponent} from './countries.component';
 
-bootstrap(CountryListComponent);
+bootstrap(CountriesComponent);
