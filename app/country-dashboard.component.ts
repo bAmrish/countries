@@ -16,7 +16,7 @@ export class CountryDashboardComponent implements OnInit {
 
     public searchTerm: string;
     public countries: Country[] = [];
-    public view: string = "list";
+    public view: string = "cards";
     public regions: string[] = [];
     public subregions: string[] = []
 
