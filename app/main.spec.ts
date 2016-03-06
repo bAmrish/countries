@@ -10,7 +10,7 @@ describe('MapLinkPipe', () => {
     it('Generates right link', () => {
         let latlng = [20, 77];
         let url = 'https://www.google.com/maps/place/20,77/@20,77,5z';
-        expect(mapLinkPipe.transform(latlng)).toEqual(url);
+        expect(mapLinkPipe.transform(latlng, [])).toEqual(url);
     });
 });
 
