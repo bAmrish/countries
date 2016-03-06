@@ -7,6 +7,7 @@ import {ROUTER_DIRECTIVES} from 'angular2/router';
 @Component ({
     selector: 'country-list',
     templateUrl: 'app/country-list.component.html',
+    styleUrls: ['app/country-list.component.css'],
     pipes: [MapLinkPipe],
     inputs: ['countries'],
     directives: [ROUTER_DIRECTIVES]
