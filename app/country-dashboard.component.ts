@@ -20,6 +20,9 @@ export class CountryDashboardComponent implements OnInit {
     public regions: string[] = [];
     public subregions: string[] = []
 
+    private regionFilter: string = "";
+    private subregionFilter: string = "";
+
     constructor(
         private _countryService: CountryService
     ){};
@@ -35,8 +38,10 @@ export class CountryDashboardComponent implements OnInit {
     }
 
     onRegionFilterChange(event) {
-        let filter = event.target.value;
-        this.countries = this._countryService.getCountriesByRegion(filter);
+        let filterValue = event.target.value;
+        //this.countries = this._countryService.getCountriesByRegion(filter);
+        this.countries = this._countryService.filter([{filterKey: 'region', filterValue: filterValue}]);
+
     }
 
     onSubRegionFilterChange(event) {

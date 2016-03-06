@@ -82,4 +82,25 @@ export class CountryService {
     getCountriesBySubRegion(subregion: string): Country[] {
         return COUNTRIES.filter(country => country["subregion"].toUpperCase() === subregion.trim().toUpperCase());        
     }
+    /**
+     * This method filters countries based on the filter you pass. 
+     * All the filters in the filters array are applied as 'and'
+     * [{filterKey: 'region', value: 'Americas'}, {filterKey:'subregion', value: 'North America'}]
+     * It will return all the countries with region: 'Americas' <em>AND<em> subregion: 'North America'.
+     *  
+    **/
+    filter(filters: {filterKey: string, filterValue: string}[]): Country[] {
+        var countries = COUNTRIES;
+        var filteredCountries = COUNTRIES;
+            
+        filters.forEach(filter => {
+            if(filter && filter.filterKey.trim() && filter.filterValue.trim()){            
+                filteredCountries = filteredCountries.filter(country => {
+                    return country[filter.filterKey].toUpperCase() === filter.filterValue.trim().toUpperCase()
+                });
+            }
+        });
+
+        return filteredCountries;
+    }
 }
