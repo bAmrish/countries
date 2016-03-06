@@ -8,8 +8,35 @@ export class CountryService {
         return COUNTRIES
     }
 
-    searchCountries(searchTerm: string): Country[] {
+    getAllRegions(): string[] {
 
+        let regions: string[] = COUNTRIES.map( country => country.region.trim() );    
+        let uniqueRegions: string[] = [];
+
+        regions.forEach(region => {
+            if (region && uniqueRegions.indexOf(region) < 0) {
+                uniqueRegions.push(region);
+            }
+        });
+
+        return uniqueRegions;
+    }
+
+    getAllSubRegions(): string[] {
+
+        let subRegions: string[] = COUNTRIES.map( country => country.subregion.trim() );    
+        let uniqueSubRegions: string[] = [];
+
+        subRegions.forEach(subRegion  => {
+            if (subRegion && uniqueSubRegions.indexOf(subRegion) < 0) {
+                uniqueSubRegions.push(subRegion);
+            }
+        });
+
+        return uniqueSubRegions;
+    }
+
+    searchCountries(searchTerm: string): Country[] {
         if (!searchTerm || !searchTerm.trim()) {
             return COUNTRIES;
         }
@@ -46,5 +73,13 @@ export class CountryService {
 
     getCountryByName(name: string): Country {
         return COUNTRIES.filter(country => country["name"].toUpperCase() === name.trim().toUpperCase())[0];
+    }
+
+    getCountriesByRegion(region: string): Country[] {
+        return COUNTRIES.filter(country => country["region"].toUpperCase() === region.trim().toUpperCase());        
+    }
+
+    getCountriesBySubRegion(subregion: string): Country[] {
+        return COUNTRIES.filter(country => country["subregion"].toUpperCase() === subregion.trim().toUpperCase());        
     }
 }

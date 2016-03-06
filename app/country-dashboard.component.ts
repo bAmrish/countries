@@ -17,6 +17,8 @@ export class CountryDashboardComponent implements OnInit {
     public searchTerm: string;
     public countries: Country[] = [];
     public view: string = "list";
+    public regions: string[] = [];
+    public subregions: string[] = []
 
     constructor(
         private _countryService: CountryService
@@ -24,13 +26,24 @@ export class CountryDashboardComponent implements OnInit {
 
     ngOnInit() {
         this.countries = this._countryService.getCountries();
+        this.regions = this._countryService.getAllRegions();
+        this.subregions = this._countryService.getAllSubRegions();
     }
 
     onSearch() {
         this.countries = this._countryService.searchCountries(this.searchTerm);
     }
 
-    
+    onRegionFilterChange(event) {
+        let filter = event.target.value;
+        this.countries = this._countryService.getCountriesByRegion(filter);
+    }
+
+    onSubRegionFilterChange(event) {
+        let filter = event.target.value;
+        this.countries = this._countryService.getCountriesBySubRegion(filter);
+    }
+
     setView(value: string){
         this.view = value;
     }

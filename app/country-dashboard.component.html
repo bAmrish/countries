@@ -21,6 +21,30 @@
             </div>
           </div>
         </form>
+        <div class="pull-left">          
+          <form class="form form-inline">            
+            <div class="filter">
+              <label for="region">Region:</label>
+              <select name="region" 
+                (change)="onRegionFilterChange($event)" 
+                class="form-control"
+              >
+                <option value="">Select a region</option>
+                <option *ngFor="#region of regions" [value]="region">{{region}}</option>
+              </select>  
+            </div>
+            <div class="filter">
+              <label for="subregion">Sub Region:</label>
+              <select name="subregion" 
+                (change)="onSubRegionFilterChange($event)" 
+                class="form-control"
+              >
+                <option value="">Select a Subregion</option>
+                <option *ngFor="#subregion of subregions" [value]="subregion">{{subregion}}</option>
+              </select>  
+            </div>
+          </form>
+        </div>
         <div class="pull-right">
           <button (click)="setView('cards')" class="btn btn-default btn-lg">
             <span class="glyphicon glyphicon-th" aria-hidden="true"></span>
