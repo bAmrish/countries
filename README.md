@@ -4,7 +4,7 @@ This application is an angular-2 project for looking up countries data.
 
 ## Installation
 
-Trying out this app is very easy. You need to have (node)[https://nodejs.org/en/] installed on your system. If not head on to https://nodejs.org/en/ and install the right version for your OS.
+Trying out this app is very easy. You need to have [node](https://nodejs.org/en/) installed on your system. If not head on to https://nodejs.org/en/ and install the right version for your OS.
 
 1. clone the repo locally on your machine using `git clone git@github.com:bAmrish/countries.git`
 2. Next change into that directory `cd countries`
@@ -27,4 +27,29 @@ The application has following features:
 2. **Country details view**: This view shows you details of a single contry.
 3. **Search**: You can do ***fuzzy search*** for any country by name in the search box.
 4. **Map**: You can veiw map of the country in goolge map by clicking on the **Map** button in the list view or **View Map** button in the details view.
+
+
+## Some Screen shots
+
+### Cards View:
+
+![Countries Cards Dashboard](screenshots/countries-cards-view.png)
+
+### List View:
+
+![Countries List Dashboard](screenshots/countries-list-view.png)
+
+## Fuzzy Search:
+
+![Countries Details](screenshots/countries-search.png)
+
+## Details View:
+
+![Countries Details](screenshots/countries-details.png)
+
+## Responsive Moible View (Details):
+
+![Countries Responsive Moible View](screenshots/countries-details-mobile.png)
+
+
 
