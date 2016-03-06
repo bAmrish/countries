@@ -1,0 +1,3 @@
+{
+    startPath: "/tests/tests.html"
+}
